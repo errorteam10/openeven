@@ -4,7 +4,7 @@
     <link href="{{url('/')}}/img/apple-icon.png" rel="apple-touch-icon" sizes="76x76">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Paper Kit 2 PRO by Creative Tim</title>
+    <title>OpenEven</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="viewport" content="width=device-width">
@@ -20,14 +20,15 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,300,700" rel="stylesheet" type="text/css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{url('/')}}/css/nucleo-icons.css" rel="stylesheet">
-
     @yield('css')
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="300">
+    <nav class="navbar navbar-expand-lg fixed-top" color-on-scroll="300">
         <div class="container">
 			<div class="navbar-translate">
-				<a class="navbar-brand" href="https://www.creative-tim.com">Paper Kit 2</a>
+				<a class="navbar-brand" href="https://www.creative-tim.com">
+          <img src="{{url('/img/openeven/logo.svg')}}" class="img-fluid">
+        </a>
 	            <button class="navbar-toggler navbar-toggler-right navbar-burger" aria-expanded="false" aria-controls="navbarTogglerDemo02" aria-label="Toggle navigation" type="button" data-target="#navbarToggler" data-toggle="collapse">
 					<span class="navbar-toggler-bar"></span>
 					<span class="navbar-toggler-bar"></span>
@@ -37,59 +38,33 @@
 	        <div class="collapse navbar-collapse" id="navbarToggler">
 	            <ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-	                    <a class="nav-link" href="../index.html"><i class="nc-icon nc-layout-11"></i>Components</a>
+	                    <a class="nav-link" href="../index.html"><i class="nc-icon nc-layout-11"></i>Discover</a>
 	                </li>
 	                <li class="nav-item">
-	                    <a class="nav-link" href="../documentation/tutorial-components.html" target="_blank"><i class="nc-icon nc-book-bookmark"></i>  Documentation</a>
+	                    <a class="nav-link" href="../documentation/tutorial-components.html" target="_blank"><i class="nc-icon nc-book-bookmark"></i>Libraries</a>
 	                </li>
-					<li class="nav-item">
-                        <a title="Follow us on Twitter" class="nav-link" href="https://twitter.com/CreativeTim" target="_blank" rel="tooltip" data-placement="bottom">
-                            <i class="fa fa-twitter"></i>
-                            <p class="d-lg-none">Twitter</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a title="Like us on Facebook" class="nav-link" href="https://www.facebook.com/CreativeTim" target="_blank" rel="tooltip" data-placement="bottom">
-                            <i class="fa fa-facebook-square"></i>
-                            <p class="d-lg-none">Facebook</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a title="Follow us on Instagram" class="nav-link" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" rel="tooltip" data-placement="bottom">
-                            <i class="fa fa-instagram"></i>
-                            <p class="d-lg-none">Instagram</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a title="Star on GitHub" class="nav-link" href="https://www.github.com/CreativeTimOfficial" target="_blank" rel="tooltip" data-placement="bottom">
-                            <i class="fa fa-github"></i>
-                            <p class="d-lg-none">GitHub</p>
-                        </a>
-                    </li>
+									<div class="nav-item dropdown">
+					                <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Users</a>
+					                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					                    <a class="dropdown-item" href="{{url('/')}}/login">Login</a>
+					                    <a class="dropdown-item" href="{{url('/')}}/register">Register</a>
+															<div class="dropdown-divider"></div>
+					                    <a class="dropdown-item" href="{{url('/')}}/business_register">Host An Event</a>
+					                </ul>
+					            </div>
 	            </ul>
 	        </div>
 		</div>
     </nav>
 
-		<div class="page-header" style="background-image: url('../assets/img/daniel-olahh.jpg');" data-parallax="true">
-			<div class="filter"></div>
-			<div class="container">
-			    <div class="motto text-center">
-			        <h1>Example page</h1>
-			        <h3>Start designing your landing page here.</h3>
-			        <br>
-			        <a class="btn btn-outline-neutral btn-round" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-play"></i>Watch video</a>
-			        <button class="btn btn-outline-neutral btn-round" type="button">Download</button>
-			    </div>
-			</div>
-    	</div>
 
+				@yield('body')
         <div class="main">
           @yield('content')
 
 </div>
 
-	<footer class="footer section-dark">
+	<footer class="footer section-dark" id="get_started">
 		<div class="container">
 			<div class="row">
 				<nav class="footer-nav">

@@ -1,6 +1,23 @@
 @extends('layouts.app')
 
+@section('body')
+<div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1519292417683-988b1a924c87?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdd8a55c54b2c9698a945ce327df89b3&auto=format&fit=crop&w=1950&q=80');" data-parallax="true">
+  <div class="filter"></div>
+  <div class="container">
+      <div class="motto text-center">
+          <h1>Open Source Event Hosting</h1>
+          <h3>Community Run, How Events Should Be.</h3>
+          <br>
+
+          <button class="btn btn-outline-neutral btn-round" type="button">Watch Video</button>
+          <a href="#get_started" class="btn btn-outline-neutral btn-round">Get Started</a>
+      </div>
+  </div>
+  </div>
+@endsection
+
 @section('content')
+
 <div class="section text-center">
       <div class="container">
           <div class="row">
