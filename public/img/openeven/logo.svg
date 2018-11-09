@@ -1,0 +1,17 @@
+<svg width="334" height="79" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="81" width="336" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Arvo, sans-serif" font-size="63" id="svg_1" y="56.866001" x="25.785699" stroke-width="0" stroke="#000" fill="#000000">Open</text>
+  <path stroke="#000" id="svg_9" d="m-81.346617,123.518653c-0.096301,0.110308 -0.275459,0.184685 -0.481399,0.184933c-0.30763,-0.000354 -0.556306,-0.165551 -0.556893,-0.36976c0.000587,-0.204316 0.249263,-0.369477 0.556893,-0.369866c0.205887,0.000248 0.384991,0.07459 0.481346,0.184898l0.211382,0.080933l0.007629,0.002906c-0.069945,-0.214379 -0.356715,-0.37504 -0.700358,-0.375111c-0.396035,0.000071 -0.71695,0.21321 -0.717004,0.476241c0.000107,0.262925 0.321022,0.476064 0.717004,0.476135c0.343697,-0.000071 0.630573,-0.160802 0.700358,-0.375217l-0.007523,0.00287l-0.211436,0.081039zm0.230163,-0.184827l-0.38147,-0.14631l0,0.081393l-0.585543,0l0,0.129726l0.585543,0l0,0.081393l0.38147,-0.146203z" stroke-opacity="null" stroke-width="1.5" fill="#000000"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Arvo, sans-serif" font-size="39" id="svg_3" y="56.859538" x="188.982651" stroke-width="0" stroke="#000" fill="#4c4c4c">Even</text>
+ </g>
+</svg>
