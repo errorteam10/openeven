@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg fixed-top" color-on-scroll="300">
         <div class="container">
 			<div class="navbar-translate">
-				<a class="navbar-brand" href="https://www.creative-tim.com">
+				<a class="navbar-brand" href="https://www.openeven.com">
           <img src="{{url('/img/openeven/logo.svg')}}" class="img-fluid">
         </a>
 	            <button class="navbar-toggler navbar-toggler-right navbar-burger" aria-expanded="false" aria-controls="navbarTogglerDemo02" aria-label="Toggle navigation" type="button" data-target="#navbarToggler" data-toggle="collapse">
@@ -38,10 +38,10 @@
 	        <div class="collapse navbar-collapse" id="navbarToggler">
 	            <ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-	                    <a class="nav-link" href="../index.html"><i class="nc-icon nc-layout-11"></i>Discover</a>
+						<a class="nav-link" href="https:www.openeven.com/discover"><i class="nc-icon nc-layout-11"></i>Discover</a>
 	                </li>
 	                <li class="nav-item">
-	                    <a class="nav-link" href="../documentation/tutorial-components.html" target="_blank"><i class="nc-icon nc-book-bookmark"></i>Libraries</a>
+	                    <a class="nav-link" href="../documentation/tutorial-components.html" target="_blank"><i class="nc-icon nc-book-bookmark"></i>Placeholder</a>
 	                </li>
 									<div class="nav-item dropdown">
 					                <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Users</a>
@@ -69,9 +69,9 @@
 			<div class="row">
 				<nav class="footer-nav">
 					<ul>
-						<li><a href="https://www.creative-tim.com">Creative Tim</a></li>
-						<li><a href="http://blog.creative-tim.com">Blog</a></li>
-						<li><a href="https://www.creative-tim.com/license">Licenses</a></li>
+						<li><a href="https:www.openeven.com">Creative Tim</a></li>
+						<li><a href="https:www.openeven.com">Blog</a></li>
+						<li><a href="https:www.openeven.com">Licenses</a></li>
 					</ul>
 				</nav>
 				<div class="credits ml-auto">
@@ -83,6 +83,24 @@
 		</div>
 	</footer>
 
+	<div class="modal" tabindex="-1" role="dialog" id="modal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_title"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" id="modal_content">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+	</div>
 
 
 <script src="{{url('/')}}/js/jquery-3.2.1.js" type="text/javascript"></script>
@@ -92,6 +110,12 @@
 
 <!--  Paper Kit Initialization snd functons -->
 <script src="{{url('/')}}/js/paper-kit.js?v=2.1.0"></script>
+<script type="text/javascript" src="{{'/'}}/js/instascan.min.js"></script>
+<script src="{{url('/')}}/js/openeven/framework.js"></script>
+<script>
+    window.OpenEven = new OpenEven('{{url('/')}}');
+		console.log(window.OpenEven);
+</script>
 
 @yield('js')
 

@@ -1,29 +1,24 @@
 @extends('layouts.app')
 
-@section('body')
-<div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1519292417683-988b1a924c87?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdd8a55c54b2c9698a945ce327df89b3&auto=format&fit=crop&w=1950&q=80');" data-parallax="true">
-  <div class="filter"></div>
-  <div class="container">
-      <div class="motto text-center">
-          <h1>Open Source Event Hosting</h1>
-          <h3>Community Run, How Events Should Be.</h3>
-          <br>
-
-          <button class="btn btn-outline-neutral btn-round" type="button">Watch Video</button>
-          <a href="#get_started" class="btn btn-outline-neutral btn-round">Get Started</a>
-      </div>
-  </div>
-  </div>
-@endsection
-
+@component('parts.body', [
+    'cover_image'=> 'https://images.unsplash.com/photo-1450387635522-8ecb968079bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b5775d3405488ff233694e545c2ad7f&auto=format&fit=crop&w=1822&q=80',
+    'parallax'=> 'true',
+    'title'=> 'Open Source Event Hosting',
+    'tag_line'=> 'Community Run, How Events Should Be.',
+    'button'=>  json_encode([
+        ['text' => 'Get Started', 'link' => '#justin', 'class' => "btn btn-outline-neutral btn-round"],
+        ['text' => 'Watch Video', 'link' => '#justin', 'class' => "btn btn-outline-neutral btn-round"]
+    ])
+])
+@endcomponent
 @section('content')
 
 <div class="section text-center">
       <div class="container">
           <div class="row">
               <div class="col-md-8 ml-auto mr-auto">
-                  <h2 class="title">Let's talk product</h2>
-                  <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
+                  <h2 class="title">OpenEven Event App</h2>
+                  <h5 class="description">OpenEven is an event planning platform that is open source and everyone has even oppurtunity.</h5>
                   <br>
                   <a class="btn btn-danger btn-round" href="#paper-kit">See Details</a>
               </div>
@@ -161,45 +156,7 @@
     </div>
     </div>
 </div>
-
-      <div class="section landing-section">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-8 ml-auto mr-auto">
-                      <h2 class="text-center">Keep in touch?</h2>
-                      <form class="contact-form">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <label>Name</label>
-              <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="nc-icon nc-single-02"></i>
-                                    </span>
-                                    <input class="form-control" type="text" placeholder="Name">
-                                </div>
-                              </div>
-                              <div class="col-md-6">
-                                  <label>Email</label>
-              <div class="input-group">
-                <span class="input-group-addon">
-                  <i class="nc-icon nc-email-85"></i>
-                </span>
-                <input class="form-control" type="text" placeholder="Email">
-              </div>
-                              </div>
-                          </div>
-                          <label>Message</label>
-                          <textarea class="form-control" placeholder="Tell us your thoughts and feelings..." rows="4"></textarea>
-                          <div class="row">
-                              <div class="col-md-4 ml-auto mr-auto">
-                                  <button class="btn btn-danger btn-lg btn-fill">Send Message</button>
-                              </div>
-                          </div>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
+      @include('parts.forum')
 @endsection
 
 @push('css')
