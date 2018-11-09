@@ -14,9 +14,11 @@ Route::get('/', function () {return view('pages.home');});
 Route::get('/home', 'User@home')->name('home');
 
 //Event Routes POST/GET/SET
-Route::get('/event/{id}', 'Event@get_event')->name('get_event');
+Route::get('/event/{id}/{access?}', 'Event@get_event')->name('get_event');
+Route::get('/event/random/{count}', 'Event@get_random');
 Route::get('/organizer/{name}', 'Event@get_organizer')->name('get_organizer');
 Route::post('/make/event', 'Event@make_event');
 Route::post('/make/ticket', 'Ticket@make_ticket');
 Route::post('/edit/event', 'Event@edit_event');
 Route::post('/edit/ticket', 'Ticket@edit_ticket');
+Route::get('/get/ticket', 'Ticket@get_ticket');
