@@ -7,6 +7,15 @@ use App\event as Events;
 
 class Event extends Controller
 {
+    //Get The Events By The Current user
+    public function mine() {
+      if(Auth()->User()->id != null && Auth()->User()->id != '') {
+        $data = json_decode(Events::get()->where('owner', Auth()->User()->id));
+        return view('pages.user.events', [
+          'events' => $data
+        ]);
+      }
+    }
     //GEt Random Events based on $count provided
     public function get_random($count) {
       if($count != null && $count != '') {
@@ -24,7 +33,7 @@ class Event extends Controller
         if($access != null && $access == 'ajax') {
           die(json_encode($data));
         } else {
-          die(json_encode($data));
+          //die(json_encode($data));
           return view('pages.events.event', [
             'event' => $data
           ]);
