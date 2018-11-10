@@ -6,7 +6,7 @@
     'title'=> 'Open Source Event Hosting',
     'tag_line'=> 'Community Run, How Events Should Be.',
     'button'=>  json_encode([
-        ['text' => 'Get Started', 'link' => '#justin', 'class' => "btn btn-outline-neutral btn-round"],
+        ['text' => 'Get Started', 'link' => '/mobile', 'class' => "btn btn-outline-neutral btn-round"],
         ['text' => 'Watch Video', 'link' => '#justin', 'class' => "btn btn-outline-neutral btn-round"]
     ])
 ])
@@ -20,7 +20,7 @@
                   <h2 class="title">OpenEven Event App</h2>
                   <h5 class="description">OpenEven is an event planning platform that is open source and everyone has even oppurtunity.</h5>
                   <br>
-                  <a class="btn btn-danger btn-round" href="#paper-kit">See Details</a>
+                  <a class="btn btn-danger btn-round" href="">See Details</a>
               </div>
           </div>
   <br><br>

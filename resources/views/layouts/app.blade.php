@@ -38,7 +38,7 @@
 	        <div class="collapse navbar-collapse" id="navbarToggler">
 	            <ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="https:www.openeven.com/discover"><i class="nc-icon nc-layout-11"></i>Discover</a>
+						<a class="nav-link" href="{{url('/')}}/discover"><i class="nc-icon nc-layout-11"></i>Discover</a>
 	                </li>
 	                <li class="nav-item">
 	                    <a class="nav-link" href="../documentation/tutorial-components.html" target="_blank"><i class="nc-icon nc-book-bookmark"></i>Placeholder</a>
@@ -46,10 +46,17 @@
 									<div class="nav-item dropdown">
 					                <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Users</a>
 					                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					                    <a class="dropdown-item" href="{{url('/')}}/login">Login</a>
+					                    @if((Auth()->User() != null) && Auth()->User()->name != '')
+															<a class="dropdown-item" href="{{url('/')}}/home">My Home</a>
+															<a class="dropdown-item" href="{{url('/')}}/events/mine">My Events</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href="{{url('/')}}/settings">My Settings</a>
+															@else
+															<a class="dropdown-item" href="{{url('/')}}/login">Login</a>
 					                    <a class="dropdown-item" href="{{url('/')}}/register">Register</a>
 															<div class="dropdown-divider"></div>
 					                    <a class="dropdown-item" href="{{url('/')}}/business_register">Host An Event</a>
+															@endif
 					                </ul>
 					            </div>
 	            </ul>
