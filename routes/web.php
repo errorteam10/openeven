@@ -11,7 +11,26 @@ Route::domain('mobile.' . env('app_url') )->group(function () {
 // Main App Routes
 Auth::routes();
 Route::get('/', function () {return view('pages.home');});
+
+Route::get('/logout', function(){
+  Auth::logout();
+    return redirect('/login');
+});
 Route::get('/home', 'User@home')->name('home');
+Route::get('/discover', 'Pages@discover')->name('home');
+
+//User Tickets and Events
+Route::get('/events/mine', 'Event@mine');
+Route::get('/get_ticket/{id}/{name}/{cost}/{bought}', 'Ticket@reg_ticket');
+Route::post('/purchase', 'Ticket@purchase');
+//Checkin
+Route::get('/mobile/checkin', 'Mobile@checkin');
+Route::post('/mobile/checkin', 'Mobile@check_in');
+
+Route::get('/kiosk/checkin', 'Mobile@kioskcheckin');
+Route::post('/kiosk/checkin', 'Mobile@kioskcheck_in');
+
+
 
 //Event Routes POST/GET/SET
 Route::get('/event/{id}/{access?}', 'Event@get_event')->name('get_event');
