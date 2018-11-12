@@ -11,6 +11,7 @@ class Event extends Controller
     public function mine() {
       if(Auth()->User()->id != null && Auth()->User()->id != '') {
         $data = json_decode(Events::get()->where('owner', Auth()->User()->id));
+      //  dd($data);
         return view('pages.user.events', [
           'events' => $data
         ]);
@@ -51,28 +52,37 @@ class Event extends Controller
       ]);
     }
     //Create an Event. This data must be sanatized for security reasons. Users mst have the the Create, Read, and Write Permissions in their group.
-    public function make_event(Request $reqest) {
-      if($equest->post('name') != null && $request->post('name') != '') {
+    public function make_event(Request $request) {
+    //  dd($request->all());
+    $name = $request->get('name');
+    //dd($name);
         $data = json_decode(Events::insert([
-          'name' => $request->post('name'),
-          'organizer' => Auth()->User()->name,
-          'tags' => $request->post('tags'),
-          'data' => json_encode([
-            'about' => $request->post('about'),
-            'images' => $reqest->post('images'),
-            'title'=> $request->post('name'),
-            'tagline' => $request->post('tagline'),
-            'theme' => json_encode([
-              'css' => $request->post('css'),
-              'text_color' => $request->post('text-color'),
-              'heading_color' => $request->post('heading_color'),
-              'background_color' => $reqest->post('background_color')
-            ])
-          ]),
-          'layout' => 'default',
-          'logo' => $request->post('logo'),
-          'cover_image' => $request->post('cover_image')
+          'title' => $name,
+          'tags' => $request->get('tags'),
+          'about' => $request->get('about'),
+          'owner' => Auth()->User()->id,
+          'images' => $request->get('images'),
+          'tagline' => $request->get('tagline'),
+          'css' => $request->get('css'),
+          'text_color' => $request->get('text_color'),
+          'heading_color' => $request->get('heading_color'),
+          'background_color' => $request->get('background_color'),
+          'layout' => $request->get('layout'),
+          'logo' => $request->get('logo'),
+          'hotel_name' => $request->get('hotel_name'),
+          'hotel_location' => $request->get('hotel_location'),
+          'hotel_pricing' => $request->get('hotel_pricing'),
+          'parking_name' => $request->get('parking_name'),
+          'parking_location' => $request->get('parking_location'),
+          'parking_pricing' => $request->get('parking_pricing'),
+          'food_name' => $request->get('food_name'),
+          'food_location' => $request->get('food_location'),
+          'food_pricing' => $request->get('food_pricing'),
+          'number_of_tickets' => $request->get('number_of_tickets'),
+          'venue_location' => $request->get('venue_location'),
+          'pricing' => $request->get('pricing'),
+          'cover_image' => $request->get('cover')
         ]));
-      }
+        return redirect()->back();
     }
 }

@@ -20,5 +20,8 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '/mobile/checkin',
+        '/make/event',
+        '/purchase',
+        '/make/event'
     ];
 }

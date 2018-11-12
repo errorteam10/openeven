@@ -11,7 +11,7 @@ class User extends Controller
 
     public function home() {
       $past = json_decode(Ticket::where([['owner', Auth()->User()->id],['status', 'past'],])->get());
-      $current = json_decode(Ticket::where([['owner', Auth()->User()->id],['status', 'current'],])->get());
+      $current = json_decode(Ticket::where([['owner', Auth()->User()->id],['status', 'active'],])->get());
       $events = json_decode(Events::where([['organizer', Auth()->User()->id]])->get());
       return view('pages.user.home', [
         'past' => $past,
