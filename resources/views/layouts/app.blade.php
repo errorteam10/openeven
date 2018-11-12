@@ -1,7 +1,7 @@
 <html lang="en"><head>
 	<meta charset="utf-8">
-    <link href="{{url('/')}}/img/favicon.ico" rel="icon" type="image/png">
-    <link href="{{url('/')}}/img/apple-icon.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="{{url('/')}}/img/openeven/favicon.ico" rel="icon" type="image/png">
+<!--    <link href="{{url('/')}}/img/apple-icon.png" rel="apple-touch-icon" sizes="76x76"> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>OpenEven</title>
@@ -27,7 +27,7 @@
         <div class="container">
 			<div class="navbar-translate">
 				<a class="navbar-brand" href="https://www.openeven.com">
-          <img src="{{url('/img/openeven/logo.svg')}}" class="img-fluid">
+          <img src="{{url('/img/openeven/OpenEvenLogo_2_244x100.png')}}" class="img-fluid" style="max-width:140px;">
         </a>
 	            <button class="navbar-toggler navbar-toggler-right navbar-burger" aria-expanded="false" aria-controls="navbarTogglerDemo02" aria-label="Toggle navigation" type="button" data-target="#navbarToggler" data-toggle="collapse">
 					<span class="navbar-toggler-bar"></span>
@@ -39,9 +39,6 @@
 	            <ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a class="nav-link" href="{{url('/')}}/discover"><i class="nc-icon nc-layout-11"></i>Discover</a>
-	                </li>
-	                <li class="nav-item">
-	                    <a class="nav-link" href="../documentation/tutorial-components.html" target="_blank"><i class="nc-icon nc-book-bookmark"></i>Placeholder</a>
 	                </li>
 									<div class="nav-item dropdown">
 					                <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false">Users</a>
@@ -55,7 +52,6 @@
 															<a class="dropdown-item" href="{{url('/')}}/login">Login</a>
 					                    <a class="dropdown-item" href="{{url('/')}}/register">Register</a>
 															<div class="dropdown-divider"></div>
-					                    <a class="dropdown-item" href="{{url('/')}}/business_register">Host An Event</a>
 															@endif
 					                </ul>
 					            </div>

@@ -31,9 +31,9 @@
           <i class="nc-icon nc-album-2"></i>
         </div>
         <div class="description">
-          <h4 class="info-title">Beautiful Gallery</h4>
-          <p class="description">Spend your time generating new ideas. You don't have to think of implementing.</p>
-          <a class="btn btn-link btn-danger" href="#pkp">See more</a>
+          <h4 class="info-title">Custom Events</h4>
+          <p class="description">Create your own event, and publish it!</p>
+
         </div>
       </div>
     </div>
@@ -43,9 +43,9 @@
           <i class="nc-icon nc-bulb-63"></i>
         </div>
         <div class="description">
-          <h4 class="info-title">New Ideas</h4>
-          <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient.</p>
-          <a class="btn btn-link btn-danger" href="#pkp">See more</a>
+          <h4 class="info-title">Scan Your Ticket</h4>
+          <p>Scan your ticket at a kiosk and check into your event</p>
+
         </div>
       </div>
     </div>
@@ -55,9 +55,9 @@
           <i class="nc-icon nc-chart-bar-32"></i>
         </div>
         <div class="description">
-          <h4 class="info-title">Statistics</h4>
-          <p>Choose from a veriety of many colors resembling sugar paper pastels.</p>
-          <a class="btn btn-link btn-danger" href="#pkp">See more</a>
+          <h4 class="info-title">Discover New Events</h4>
+          <p>Learn about upcoming events, and venues.</p>
+
         </div>
       </div>
     </div>
@@ -67,9 +67,9 @@
           <i class="nc-icon nc-sun-fog-29"></i>
         </div>
         <div class="description">
-          <h4 class="info-title">Delightful design</h4>
-          <p>Find unique and handmade delightful designs related items directly from our sellers.</p>
-          <a class="btn btn-link btn-danger" href="#pkp">See more</a>
+          <h4 class="info-title">Purchase Tickets</h4>
+          <p>Purchase tickets for events you want to go to.</p>
+
         </div>
       </div>
     </div>
@@ -90,12 +90,12 @@
                       <div class="card-body">
                           <a href="#paper-kit">
                               <div class="author">
-                                  <h4 class="card-title">Henry Ford</h4>
+                                  <h4 class="card-title">Brent Dalling</h4>
                                   <h6 class="card-category">Product Manager</h6>
                               </div>
                           </a>
                           <p class="card-description text-center">
-                          Teamwork is so important that it is virtually impossible for you to reach the heights of your capabilities or make the money that you want without becoming very good at it.
+                          Teamwork is key, you must always have each others back in order to succeed.
                           </p>
                       </div>
                       <div class="card-footer text-center">
@@ -114,12 +114,12 @@
                       <div class="card-body">
                           <a href="#paper-kit">
                               <div class="author">
-                                  <h4 class="card-title">Sophie West</h4>
+                                  <h4 class="card-title">Justin Nelson</h4>
                                   <h6 class="card-category">Designer</h6>
                               </div>
                           </a>
                           <p class="card-description text-center">
-                          A group becomes a team when each member is sure enough of himself and his contribution to praise the skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
+                          You have to put forth the effort if you want a rewarding outcome.
                           </p>
                       </div>
                       <div class="card-footer text-center">
@@ -138,12 +138,35 @@
                       <div class="card-body">
                           <a href="#paper-kit">
                               <div class="author">
-                                  <h4 class="card-title">Robert Orben</h4>
-                                  <h6 class="card-category">Developer</h6>
+                                  <h4 class="card-title">Alexander Beraja</h4>
+                                  <h6 class="card-category">Designer</h6>
                               </div>
                           </a>
                           <p class="card-description text-center">
-                          The strength of the team is each individual member. The strength of each member is the team. If you can laugh together, you can work together, silence isn’t golden, it’s deadly.
+                          Teamwork is really all about listening to your team.
+                          </p>
+                      </div>
+                      <div class="card-footer text-center">
+                          <a class="btn btn-link btn-just-icon btn-neutral" href="#pablo"><i class="fa fa-twitter"></i></a>
+                          <a class="btn btn-link btn-just-icon btn-neutral" href="#pablo"><i class="fa fa-google-plus"></i></a>
+                          <a class="btn btn-link btn-just-icon btn-neutral" href="#pablo"><i class="fa fa-linkedin"></i></a>
+                      </div>
+                  </div>
+      </div>
+      <div class="col-md-4">
+                  <div class="card card-profile card-plain">
+                      <div class="card-avatar">
+                          <a href="#avatar"><img alt="..." src="../assets/img/faces/erik-lucatero-2.jpg"></a>
+                      </div>
+                      <div class="card-body">
+                          <a href="#paper-kit">
+                              <div class="author">
+                                  <h4 class="card-title">Cait Smith</h4>
+                                  <h6 class="card-category">Designer</h6>
+                              </div>
+                          </a>
+                          <p class="card-description text-center">
+                          It's not about the final product, it's about the tiny steps it took to get there.
                           </p>
                       </div>
                       <div class="card-footer text-center">

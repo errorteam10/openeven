@@ -2,15 +2,16 @@
 
 
 @foreach($event as $item)
+
 @section('body')
 @component('parts.body', [
     'cover_image'=> $item->cover_image,
     'parallax'=> 'true',
-    'title'=> $item->name,
+    'title'=> $item->title,
     'tag_line'=> $item->tagline,
     'button'=>  json_encode([
         ['text' => 'Get Started', 'link' => '#get_started', 'class' => "btn btn-outline-neutral btn-round"],
-        ['text' => 'View Website', 'link' => 'https://southernutahcodecamp.com/', 'class' => "btn btn-outline-neutral btn-round"]
+        ['text' => 'Remaining Tickets: ' . ($item->number_of_tickets - $item->tickets_bought), 'link' => url('/') .'/get_ticket/'.$item->id.'/'.$item->title.'/'.$item->pricing.'/'.$item->tickets_bought, 'class' => "btn btn-outline-neutral btn-round"]
     ])
 ])
 @endcomponent
@@ -24,7 +25,7 @@
 
 
 @section('content')
-@php($data = json_decode($item->data))
+@php($data = $item)
 <div class="section text-center" id="get_started">
       <div class="container">
           <div class="row">
@@ -33,11 +34,7 @@
                   <h5 class="description">{{$data->tagline}}</h5>
                   <h5 class="description">Organized by {{$item->organizer}}.</h5>
                   <h5 class="description">
-                  @foreach(json_decode($event[0]->tags) as $tag)
-                    @foreach($tag as $tags)
-                      <div class="badge badge-info">{{($tags)}}</div>
-                    @endforeach
-                  @endforeach
+                    {{$data->tags}}
                   </h5>
               </div>
           </div>
@@ -47,50 +44,38 @@
       <div class="col-md-3">
 
           <div class="card card-body">
-            <h3 class="title mb-2">Hotels</h3>
-            @foreach($data->hotels as $about)
-            <h4 class="bold">{{$about->hotel}}</h4> <br>{{($about->location)}}
-            @endforeach
+            <h3 class="title mb-2">Hotel</h3>
+            {{$data->hotel_name}} <br>{{($data->hotel_location)}}
           </div>
           <div class="card card-body">
             <h3 class="title mb-2">Parking</h3>
-            @foreach($data->parking as $about)
-            <h4 class="bold">{{$about->parking}}</h4> <br>{{($about->location)}}
-            @endforeach
+            {{$data->parking_name}} <br>{{($data->parking_location)}}
           </div>
           <div class="card card-body">
             <h3 class="title mb-2">Food</h3>
-            @foreach($data->food as $about)
-            <h4 class="bold">{{$about->food}}</h4> <br>{{($about->location)}}
-            @endforeach
+          {{$data->food_name}} <br>{{($data->food_location)}}
           </div>
       </div>
       <div class="col-md-6">
-        @foreach($data->about as $about)
           <div class="card card-body">
-            <h3 class="title">{{$about->title}}</h3>
-            {{($about->content)}}
+            {{($data->about)}}
           </div>
-        @endforeach
       </div>
       <div class="col-md-3">
         <div class="card card-body text-left">
-          @php($data = ($data->venue))
-              <h4 class="">Location</h4><hr>
-              <h5 class="text-left">{{$data->name}}</h5>
-              {{$data->location}}
-
-              <br><h4 class="">Schedule</h4><hr>
-              <h5 class="text-left">Event Date: {{$data->event_date}}</h5>
-              <h5 class="text-left">Check-In: {{$data->start_time}}</h5>
-
+              <h4 class="">Location</h4>
+              {{$data->venue_location}}
+              <h4 class="">Pricing</h4>
+              {{$data->pricing}}
+              <br><h4 class="">Schedule</h4>
+              Event Date: Need To Do <br>
+              Check-In: Need To Do
         </div>
       </div>
     </div>
   </div>
       </div>
   </div>
-      @include('parts.forum')
 @endsection
 @endforeach
 

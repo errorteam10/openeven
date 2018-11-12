@@ -5,5 +5,5 @@
 @endsection
 @section('js')
 <script src="{{url('/')}}/js/instascan/instascan.min.js"></script>
-  <script>window.scanner = new mobile_scanner();</script>
+  <script>window.scanner = new scanner();</script>
 @endsection
